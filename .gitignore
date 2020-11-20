@@ -14,9 +14,3 @@
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
-
-/api.zip
-/index.htm
-
-/examples/sunburst/*
-!/examples/sunburst/SIH-ST3-Deliverable.htm
