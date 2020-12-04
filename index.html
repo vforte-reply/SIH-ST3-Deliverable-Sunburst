@@ -13,7 +13,7 @@
             max-width: 800px;
             margin: 1em auto;
         }
-
+        
         .highcharts-data-table table {
             font-family: Verdana, sans-serif;
             border-collapse: collapse;
@@ -23,29 +23,29 @@
             width: 100%;
             max-width: 500px;
         }
-
+        
         .highcharts-data-table caption {
             padding: 1em 0;
             font-size: 1.2em;
             color: #555;
         }
-
+        
         .highcharts-data-table th {
             font-weight: 600;
             padding: 0.5em;
         }
-
+        
         .highcharts-data-table td,
         .highcharts-data-table th,
         .highcharts-data-table caption {
             padding: 0.5em;
         }
-
+        
         .highcharts-data-table thead tr,
         .highcharts-data-table tr:nth-child(even) {
             background: #f8f8f8;
         }
-
+        
         .highcharts-data-table tr:hover {
             background: #f1f7ff;
         }
@@ -62,10 +62,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Sunburst charts are used to visualize hierarchical data in a
-            circular shape. The inner elements are parent nodes, with
-            child nodes distributed on the outer rings. Click on a parent
-            node to drill down and inspect the tree in more detail.
+            Sunburst charts are used to visualize hierarchical data in a circular shape. The inner elements are parent nodes, with child nodes distributed on the outer rings. Click on a parent node to drill down and inspect the tree in more detail.
         </p>
     </figure>
 
@@ -75,104 +72,92 @@
         var data = [
             // TOPICS
             {
-                id: '0.1',
+                id: '0.infrastructure',
                 parent: '',
                 name: 'Infrastructure',
-                // color: '#2f7ed8'
-            },
-            {
-                id: '0.2',
+                color: '#a569bd'
+            }, {
+                id: '0.communication',
                 parent: '',
                 name: 'Communication',
-                // color: '#f28f43'
-            },
-            {
-                id: '0.3',
+                color: '#5dade2'
+            }, {
+                id: '0.data',
                 parent: '',
                 name: 'Data',
-                // color: '#c42525'
-            },
-            {
-                id: '0.4',
+                color: '#FF7F50'
+            }, {
+                id: '0.iot',
                 parent: '',
                 name: 'Automated and connected systems',
-                // color: '#1aadce'
+                color: '#58d68d'
             },
             // INNOVATIVE TECHNOLOGIES
             // Infrastructure
             {
-                id: '1.1',
-                parent: '0.1',
+                id: '1.5G',
+                parent: '0.infrastructure',
                 name: '5G',
                 value: 2000
-            },
-            {
-                id: '1.2',
-                parent: '0.1',
+            }, {
+                id: '1.blockchain',
+                parent: '0.infrastructure',
                 name: 'Blockchain',
                 value: 2000
-            },
-            {
-                id: '1.3',
-                parent: '0.1',
+            }, {
+                id: '1.edge-computing',
+                parent: '0.infrastructure',
                 name: 'Edge Computing',
                 value: 2000
             },
             // Communication
             {
-                id: '1.4',
-                parent: '0.2',
+                id: '1.AR',
+                parent: '0.communication',
                 name: 'Augmented Reality',
                 value: 1000
-            },
-            {
-                id: '1.5',
-                parent: '0.2',
+            }, {
+                id: '1.chatbot',
+                parent: '0.communication',
                 name: 'Chat Bot',
                 value: 2000
-            },
-            {
-                id: '1.6',
-                parent: '0.2',
+            }, {
+                id: '1.3d-printing',
+                parent: '0.communication',
                 name: '3D Printing',
                 value: 2000
-            },
-            {
-                id: '1.7',
-                parent: '0.2',
+            }, {
+                id: '1.VR',
+                parent: '0.communication',
                 name: 'Virtual Reality',
                 value: 3000
             },
             // Data
             {
-                id: '1.8',
-                parent: '0.3',
+                id: '1.big-data',
+                parent: '0.data',
                 name: 'Big Data Analytics',
                 value: 1000,
-                color: '#FFCF88'
-            },
-            {
-                id: '1.9',
-                parent: '0.3',
+            }, {
+                id: '1.quantum',
+                parent: '0.data',
                 name: 'Quantum Computing',
                 value: 3000
             },
             // Automated and connected systems
             {
-                id: '1.10',
-                parent: '0.4',
+                id: '1.ai',
+                parent: '0.iot',
                 name: 'Artificial Intelligence',
                 value: 1000
-            },
-            {
-                id: '1.11',
-                parent: '0.4',
+            }, {
+                id: '1.rpa',
+                parent: '0.iot',
                 name: 'Robot Process Automation',
                 value: 1000
-            },
-            {
-                id: '1.12',
-                parent: '0.4',
+            }, {
+                id: '1.self-driving',
+                parent: '0.iot',
                 name: 'Self-driving Vehicles',
                 value: 3000
             },
@@ -180,157 +165,145 @@
             // DETAILS
             // 5G
             {
-                id: '2.1',
-                parent: '1.1',
+                id: '2.risks-5G',
+                parent: '1.5G',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.2',
-                parent: '1.1',
+            }, {
+                id: '2.mitigations-5G',
+                parent: '1.5G',
                 name: 'Mitigations',
                 value: 10000
             },
             // Blockchain
             {
-                id: '2.3',
-                parent: '1.2',
+                id: '2.risks-blockchain',
+                parent: '1.blockchain',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.4',
-                parent: '1.2',
+            }, {
+                id: '2.mitigations-blockchain',
+                parent: '1.blockchain',
                 name: 'Mitigations',
                 value: 10000
             },
             // Edge Computing
             {
-                id: '2.5',
-                parent: '1.3',
+                id: '2.risks-edge-computing',
+                parent: '1.edge-computing',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.6',
-                parent: '1.3',
+            }, {
+                id: '2.mitigations-edge-computing',
+                parent: '1.edge-computing',
                 name: 'Mitigations',
                 value: 10000
             },
             // TODO
             {
-                id: '2.7',
-                parent: '1.4',
+                id: '2.risks-AR',
+                parent: '1.AR',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.8',
-                parent: '1.4',
+            }, {
+                id: '2.mitigations-AR',
+                parent: '1.AR',
                 name: 'Mitigations',
                 value: 10000
             },
             // Chat Bot
             {
-                id: '2.9',
-                parent: '1.5',
+                id: '2.risks-chatbot',
+                parent: '1.chatbot',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.10',
-                parent: '1.5',
+            }, {
+                id: '2.mitigations-chatbot',
+                parent: '1.chatbot',
                 name: 'Mitigations',
                 value: 10000
             },
             // 3D printing
             {
-                id: '2.11',
-                parent: '1.6',
+                id: '2.risks-3d-printing',
+                parent: '1.3d-printing',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.12',
-                parent: '1.6',
+            }, {
+                id: '2.mitigations-3d-printing',
+                parent: '1.3d-printing',
                 name: 'Mitigations',
                 value: 10000
             },
             // TODO
             {
-                id: '2.13',
-                parent: '1.7',
+                id: '2.risks-VR',
+                parent: '1.VR',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.14',
-                parent: '1.7',
+            }, {
+                id: '2.mitigations-VR',
+                parent: '1.VR',
                 name: 'Mitigations',
                 value: 10000
             },
             // TODO
             {
-                id: '2.15',
-                parent: '1.8',
+                id: '2.risks-big-data',
+                parent: '1.big-data',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.16',
-                parent: '1.8',
+            }, {
+                id: '2.mitigations-big-data',
+                parent: '1.big-data',
                 name: 'Mitigations',
                 value: 10000
             },
             // Quantum Computing
             {
-                id: '2.17',
-                parent: '1.9',
+                id: '2.risks-quantum',
+                parent: '1.quantum',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.18',
-                parent: '1.9',
+            }, {
+                id: '2.mitigations-quantum',
+                parent: '1.quantum',
                 name: 'Mitigations',
                 value: 10000
             },
             // Artificial Intelligence
             {
-                id: '2.19',
-                parent: '1.10',
+                id: '2.risks-ai',
+                parent: '1.ai',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.20',
-                parent: '1.10',
+            }, {
+                id: '2.mitigations-ai',
+                parent: '1.ai',
                 name: 'Mitigations',
                 value: 10000
             },
             // Robot Process Automation
             {
-                id: '2.21',
-                parent: '1.11',
+                id: '2.risks-rpa',
+                parent: '1.rpa',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.22',
-                parent: '1.11',
+            }, {
+                id: '2.mitigations-rpa',
+                parent: '1.rpa',
                 name: 'Mitigations',
                 value: 10000
             },
             // Self-Driving Vehicles
             {
-                id: '2.23',
-                parent: '1.12',
+                id: '2.risks-self-driving',
+                parent: '1.self-driving',
                 name: 'Residual Risks',
                 value: 10000
-            },
-            {
-                id: '2.24',
-                parent: '1.12',
+            }, {
+                id: '2.mitigations-self-driving',
+                parent: '1.self-driving',
                 name: 'Mitigations',
                 value: 10000
             },
@@ -339,67 +312,57 @@
             // Artificial Intelligence
             {
                 id: '3.1',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Privacy violations',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.2',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Transfer Learning Attack',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.3',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Deepfakes',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.4',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Fooling the System',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.5',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Data Poisoning',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.6',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Manipulation of Online Systems',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.7',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Transfer Learning Attack',
                 value: 10000
-            },
-            {
+            }, {
                 id: '3.8',
-                parent: '2.19',
+                parent: '2.risks-ai',
                 name: 'Data Privacy and Confidentiality',
                 value: 10000
-            },
-            {
+            }, {
                 id: '4.1',
-                parent: '2.20',
+                parent: '2.mitigations-ai',
                 name: 'Data sanitizaton',
                 value: 10000
-            },
-            {
+            }, {
                 id: '4.1',
-                parent: '2.20',
+                parent: '2.mitigations-ai',
                 name: 'Input Anomaly Detection',
                 value: 10000
-            },
-            {
+            }, {
                 id: '4.1',
-                parent: '2.20',
+                parent: '2.mitigations-ai',
                 name: 'Input Anomaly Detection',
                 value: 10000
             }
@@ -438,6 +401,7 @@
                 },
                 levels: [{
                     level: 1,
+                    // colorByPoint: true,
                     levelIsConstant: false,
                     dataLabels: {
                         filter: {
@@ -448,10 +412,14 @@
                     }
                 }, {
                     level: 2,
-                    colorByPoint: true
-                },
-                {
+                    // colorByPoint: true,
+                    colorVariation: {
+                        key: 'brightness',
+                        to: -0.3
+                    },
+                }, {
                     level: 3,
+                    // colorByPoint: true,
                     colorVariation: {
                         key: 'brightness',
                         to: -0.5
