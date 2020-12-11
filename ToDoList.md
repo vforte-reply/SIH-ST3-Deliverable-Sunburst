@@ -1,0 +1,8 @@
+- [x] Popolare la struttura dati con le informazioni d'interesse (i.e., topic e tecnologie)
+- [x] Definire i colori degli spicchi e la loro variazione
+- [x] Definire id in modo che siano human-readable
+- [x] Intercettare l'evento di click
+- [x] Aprire una nuova scheda sul browser con click + shiftKey
+- [x] Evitare il drolldown se si fa click + shiftKey
+- [ ] Cambiare tooltip
+- [ ] Creare una pagina per ogni slice
