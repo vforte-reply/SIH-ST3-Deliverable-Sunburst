@@ -98,39 +98,46 @@
                 id: '1.5G',
                 parent: '0.infrastructure',
                 name: '5G',
-                value: 2000
+                value: 2000,
+                url: 'https://www.reply.com/it/industries/telco-and-media/5g-mastering-the-magic-triangle'
             }, {
                 id: '1.blockchain',
                 parent: '0.infrastructure',
                 name: 'Blockchain',
-                value: 2000
+                value: 2000,
+                url: 'https://www.reply.com/it/blockchain'
             }, {
                 id: '1.edge-computing',
                 parent: '0.infrastructure',
                 name: 'Edge Computing',
-                value: 2000
+                value: 2000,
+                url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
             },
             // Communication
             {
                 id: '1.AR',
                 parent: '0.communication',
                 name: 'Augmented Reality',
-                value: 1000
+                value: 1000,
+                url: 'https://www.reply.com/it/content/augmented-reality'
             }, {
                 id: '1.chatbot',
                 parent: '0.communication',
                 name: 'Chat Bot',
-                value: 2000
+                value: 2000,
+                url: 'https://www.reply.com/it/topics/crm/chatbot-un-nuovo-canale-di-comunicazione-verso-il-cliente'
             }, {
                 id: '1.3d-printing',
                 parent: '0.communication',
                 name: '3D Printing',
-                value: 2000
+                value: 2000,
+                url: 'https://www.reply.com/it/3d-printing'
             }, {
                 id: '1.VR',
                 parent: '0.communication',
                 name: 'Virtual Reality',
-                value: 3000
+                value: 3000,
+                url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
             },
             // Data
             {
@@ -138,28 +145,33 @@
                 parent: '0.data',
                 name: 'Big Data Analytics',
                 value: 1000,
+                url: 'https://www.reply.com/data-reply/it/'
             }, {
                 id: '1.quantum',
                 parent: '0.data',
                 name: 'Quantum Computing',
-                value: 3000
+                value: 3000,
+                url: 'https://www.reply.com/it/topics/quantum-computing/'
             },
             // Automated and connected systems
             {
                 id: '1.ai',
                 parent: '0.iot',
                 name: 'Artificial Intelligence',
-                value: 1000
+                value: 1000,
+                url: 'https://www.reply.com/machine-learning-reply/it/'
             }, {
                 id: '1.rpa',
                 parent: '0.iot',
                 name: 'Robot Process Automation',
-                value: 1000
+                value: 1000,
+                url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
             }, {
                 id: '1.self-driving',
                 parent: '0.iot',
                 name: 'Self-driving Vehicles',
-                value: 3000
+                value: 3000,
+                url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
             },
 
             // DETAILS
@@ -369,9 +381,20 @@
 
         ];
 
+        // Source: https://www.highcharts.com/forum/viewtopic.php?t=40816
+        Highcharts.seriesTypes.sunburst.prototype.onClickDrillToNode = function(event) {
+            var series = this,
+                point = event.point,
+                drillId = point && point.drillId;
+            // If a drill id is returned, noDrill is not set to true and shiftKey is not true, add click event and cursor.
+            if (Highcharts.isString(drillId) && (!point.noDrill) && (!event.shiftKey)) {
+                point.setState(''); // Remove hover
+                series.drillToNode(drillId);
+            }
+        }
+
         // Splice in transparent for the center circle
         Highcharts.getOptions().colors.splice(0, 0, 'transparent');
-
 
         Highcharts.chart('container', {
 
@@ -390,6 +413,24 @@
                 data: data,
                 allowDrillToNode: true,
                 cursor: 'pointer',
+                events: {
+                    click: function(event) {
+                        console.log(event);
+                        if ('shiftKey' in event && event.shiftKey) {
+                            if ('point' in event && 'url' in event.point) {
+                                window.open(event.point.url, '_blank');
+                            }
+
+                            // alert(
+                            //     this.name + ' clicked\n' +
+                            //     'Alt: ' + event.altKey + '\n' +
+                            //     'Control: ' + event.ctrlKey + '\n' +
+                            //     'Meta: ' + event.metaKey + '\n' +
+                            //     'Shift: ' + event.shiftKey
+                            // );
+                        }
+                    }
+                },
                 dataLabels: {
                     format: '{point.name}',
                     filter: {
@@ -423,6 +464,13 @@
                     colorVariation: {
                         key: 'brightness',
                         to: -0.5
+                    }
+                }, {
+                    level: 4,
+                    // colorByPoint: true,
+                    colorVariation: {
+                        key: 'brightness',
+                        to: -0.4
                     }
                 }]
 
