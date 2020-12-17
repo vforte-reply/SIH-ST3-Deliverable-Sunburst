@@ -327,58 +327,59 @@
                 name: 'Attacks on Smart Remote Keys',
                 value: 10000,
                 url: './pages/ai/risks/test.html'
-            },/* {
-                id: '3.2',
-                parent: '2.risks-ai',
-                name: 'Transfer Learning Attack',
-                value: 10000
-            }, {
-                id: '3.3',
-                parent: '2.risks-ai',
-                name: 'Deepfakes',
-                value: 10000
-            }, {
-                id: '3.4',
-                parent: '2.risks-ai',
-                name: 'Fooling the System',
-                value: 10000
-            }, {
-                id: '3.5',
-                parent: '2.risks-ai',
-                name: 'Data Poisoning',
-                value: 10000
-            }, {
-                id: '3.6',
-                parent: '2.risks-ai',
-                name: 'Manipulation of Online Systems',
-                value: 10000
-            }, {
-                id: '3.7',
-                parent: '2.risks-ai',
-                name: 'Transfer Learning Attack',
-                value: 10000
-            }, {
-                id: '3.8',
-                parent: '2.risks-ai',
-                name: 'Data Privacy and Confidentiality',
-                value: 10000
-            }, {
-                id: '4.1',
-                parent: '2.mitigations-ai',
-                name: 'Data sanitizaton',
-                value: 10000
-            }, {
-                id: '4.1',
-                parent: '2.mitigations-ai',
-                name: 'Input Anomaly Detection',
-                value: 10000
-            }, {
-                id: '4.1',
-                parent: '2.mitigations-ai',
-                name: 'Input Anomaly Detection',
-                value: 10000
-            }
-*/
+            },
+            /* {
+                            id: '3.2',
+                            parent: '2.risks-ai',
+                            name: 'Transfer Learning Attack',
+                            value: 10000
+                        }, {
+                            id: '3.3',
+                            parent: '2.risks-ai',
+                            name: 'Deepfakes',
+                            value: 10000
+                        }, {
+                            id: '3.4',
+                            parent: '2.risks-ai',
+                            name: 'Fooling the System',
+                            value: 10000
+                        }, {
+                            id: '3.5',
+                            parent: '2.risks-ai',
+                            name: 'Data Poisoning',
+                            value: 10000
+                        }, {
+                            id: '3.6',
+                            parent: '2.risks-ai',
+                            name: 'Manipulation of Online Systems',
+                            value: 10000
+                        }, {
+                            id: '3.7',
+                            parent: '2.risks-ai',
+                            name: 'Transfer Learning Attack',
+                            value: 10000
+                        }, {
+                            id: '3.8',
+                            parent: '2.risks-ai',
+                            name: 'Data Privacy and Confidentiality',
+                            value: 10000
+                        }, {
+                            id: '4.1',
+                            parent: '2.mitigations-ai',
+                            name: 'Data sanitizaton',
+                            value: 10000
+                        }, {
+                            id: '4.1',
+                            parent: '2.mitigations-ai',
+                            name: 'Input Anomaly Detection',
+                            value: 10000
+                        }, {
+                            id: '4.1',
+                            parent: '2.mitigations-ai',
+                            name: 'Input Anomaly Detection',
+                            value: 10000
+                        }
+            */
             // RESIDUAL RISKS
             // Artificial Intelligence
             {
@@ -445,8 +446,8 @@
             var series = this,
                 point = event.point,
                 drillId = point && point.drillId;
-            // If a drill id is returned, noDrill is not set to true and shiftKey is not true, add click event and cursor.
-            if (Highcharts.isString(drillId) && (!point.noDrill) && (!event.shiftKey)) {
+            // If a drill id is returned, noDrill is not set to true and ctrlKey is not true, add click event and cursor.
+            if (Highcharts.isString(drillId) && (!point.noDrill) && (!event.ctrlKey)) {
                 point.setState(''); // Remove hover
                 series.drillToNode(drillId);
             }
@@ -475,7 +476,7 @@
                 events: {
                     click: function(event) {
                         console.log(event);
-                        if ('shiftKey' in event && event.shiftKey) {
+                        if ('ctrlKey' in event && event.ctrlKey) {
                             if ('point' in event && 'url' in event.point) {
                                 window.open(event.point.url, '_blank');
                             }
