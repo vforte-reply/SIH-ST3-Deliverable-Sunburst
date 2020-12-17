@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <template id="technology_risk">
+        <h1 id="title">Technology</h1>
+        <h2 id="h_desc">Description</h2>
+        <p id="desc">Testo d'esempio</p>
+
+        <h2>Mitigations</h2>
+        <table id="links" style="border-collapse: collapse; width: 100%;" border="1">
+            <tbody>
+                <tr>
+                    <th style="width: 50%;"><strong>Description</strong></th>
+                    <th style="width: 50%;"><strong>Link</strong></th>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="technology_mitigation">
+        <h1 id="title">Technology</h1>
+        <h2 id="h_desc">Description</h2>
+        <p id="desc">Testo d'esempio</p>
+        <h2>Risks</h2>
+        <table id="links" style="border-collapse: collapse; width: 100%;" border="1">
+            <tbody>
+                <tr>
+                    <th style="width: 50%;"><strong>Description</strong></th>
+                    <th style="width: 50%;"><strong>Link</strong></th>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+
+    <template id="table-row">
+        <tr>
+            <td id="field-desc" style="width: 50%;">&nbsp;</td>
+            <td id="field-link" style="width: 50%;">&nbsp;</td>
+        </tr>
+    </template>
+
+    <!-- Import data -->
+    <script type='text/javascript' src='js/data.js'></script>
+
+    <script>
+        $(function() {
+            var point = JSON.parse(sessionStorage.getItem("point"));
+
+            if (point.type === "risk") {
+                var temp = document.getElementById("technology_risk");
+            } else {
+                var temp = document.getElementById("technology_mitigation");
+            }
+
+            var clon = temp.content.cloneNode(true);
+
+            clon.getElementById("title").innerHTML = point.title
+            clon.getElementById("desc").innerHTML = point.description
+            document.getElementById("content").appendChild(clon);
+
+            var row = 1;
+            point.links.forEach(link => {
+                console.log(point.links);
+
+                var temp = document.getElementById("table-row");
+                var template = temp.content.cloneNode(true);
+                template.id = 'row' + (row++);
+
+                template.getElementById('field-desc').innerHTML = link.name;
+                template.getElementById('field-desc').id = 'field-desc' + (row)
+
+                template.getElementById('field-link').innerHTML = "<button type='button' id='link-to-" + link.id + "'> " + link.name + "</button>";
+                template.getElementById('field-link').id = 'field-link' + (row);
+                template.getElementById('link-to-' + link.id).addEventListener("click", function(event) {
+                    sessionStorage.setItem("point", JSON.stringify({
+                        title: link.name,
+                        description: link.description,
+                        links: link.links.map(label => data.find(x => x.id === label))
+                    }));
+
+                    window.open(link.url, '_self');
+                });
+
+                document.getElementById("links").getElementsByTagName("tbody")[0].appendChild(template);
+            });
+        });
+    </script>
+</body>
+
+</html>
