@@ -44,7 +44,7 @@
     <template id="table-row">
         <tr>
             <td id="field-desc" style="width: 50%;">&nbsp;</td>
-            <td id="field-link" style="width: 50%;">&nbsp;</td>
+            <td id="field-link" style="width: 50%;text-align:center;">&nbsp;</td>
         </tr>
     </template>
 
@@ -78,7 +78,7 @@
                 template.getElementById('field-desc').innerHTML = link.name;
                 template.getElementById('field-desc').id = 'field-desc' + (row)
 
-                template.getElementById('field-link').innerHTML = "<button type='button' id='link-to-" + link.id + "'> " + link.name + "</button>";
+                template.getElementById('field-link').innerHTML = "<button type='button' id='link-to-" + link.id + "'> Open " + link.name + "</button>";
                 template.getElementById('field-link').id = 'field-link' + (row);
                 template.getElementById('link-to-' + link.id).addEventListener("click", function(event) {
                     sessionStorage.setItem("point", JSON.stringify({
