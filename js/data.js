@@ -55,7 +55,10 @@ var data = [
         name: 'Chat Bot',
         value: 2000,
         url: 'https://www.reply.com/it/topics/crm/chatbot-un-nuovo-canale-di-comunicazione-verso-il-cliente'
-    }, {
+    },
+
+    //3D printing
+    {
         id: '1.3d-printing',
         parent: '0.communication',
         name: '3D Printing',
@@ -164,6 +167,66 @@ var data = [
         name: 'Mitigations',
         value: 10000
     },
+
+    //chatbot risks
+
+    {
+        id: '2.1_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 'Spoofing/impersonating someone else',
+        value: 10000
+    }, {
+        id: '2.2_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 'Tampering of data',
+        value: 10000
+    }, {
+        id: '2.3_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 'Data theft',
+        value: 10000
+    }, {
+        id: '2.4_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 're-purposing of bots by hackers',
+        value: 10000
+    },
+    {
+        id: '2.5_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 'phishing/whaling',
+        value: 10000
+    },
+    {
+        id: '2.6_risks-chatbot',
+        parent: '2.risks-chatbot',
+        name: 'ransomware, malware',
+        value: 10000
+    },
+
+    //mitigation chatbot            
+    {
+        id: '2.5_risks-chatbot',
+        parent: '2.mitigations-chatbot',
+        name: '2FA with Biometric',
+        value: 10000
+    }, {
+        id: '2.6_risks-chatbot',
+        parent: '2.mitigations-chatbot',
+        name: 'Authentication Timeouts',
+        value: 10000
+    }, {
+        id: '2.7_risks-chatbot',
+        parent: '2.mitigations-chatbot',
+        name: 'Messages That Self-Destruct',
+        value: 10000
+    }, {
+        id: '2.1_mitigation-chatbot',
+        parent: '2.mitigations-chatbot',
+        name: 'End to end encryption',
+        value: 10000
+    },
+
     // 3D printing
     {
         id: '2.risks-3d-printing',
@@ -176,6 +239,57 @@ var data = [
         name: 'Mitigations',
         value: 10000
     },
+
+    //3D printing risks
+
+    {
+        id: '2.1_risks-3d-printing',
+        parent: '2.risks-3d-printing',
+        name: 'software vulnerabilities',
+        value: 10000
+    }, {
+        id: '2.2_risks-3d-printing',
+        parent: '2.risks-3d-printing',
+        name: 'Network exposure',
+        value: 10000
+    }, {
+        id: '2.3_risks-3d-printing',
+        parent: '2.risks-3d-printing',
+        name: 'Final product damange',
+        value: 10000
+    }, {
+        id: '2.4_risks-3d-printing',
+        parent: '2.risks-3d-printing',
+        name: 'COnfidential and privacy concerns',
+        value: 10000
+    },
+
+    //mitigation 3D printing
+
+    {
+        id: '2.5_risks-3d-printing',
+        parent: '2.mitigations-3d-printing',
+        name: 'Secure digital design and code',
+        value: 10000
+    }, {
+        id: '2.6_risks-3d-printing',
+        parent: '2.mitigations-3d-printing',
+        name: 'Secure acoustic measurements',
+        value: 10000
+    }, {
+        id: '2.7_risks-3d-printing',
+        parent: '2.mitigations-3d-printing',
+        name: 'Verify printer component tracking',
+        value: 10000
+    }, {
+        id: '2.1_mitigation-3d-printing',
+        parent: '2.mitigations-3d-printing',
+        name: 'Secure deteclable nanorods',
+        value: 10000
+    },
+
+
+
     // TODO
     {
         id: '2.risks-VR',
@@ -246,6 +360,69 @@ var data = [
         id: '2.mitigations-self-driving',
         parent: '1.self-driving',
         name: 'Mitigations',
+        value: 10000
+    },
+
+    //risk self driving cars
+
+    {
+        id: '2.1_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'Attacks on Smart Remote Keys',
+        value: 10000
+    }, {
+        id: '2.2_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'Attacks on Cloud-Based Networks',
+        value: 10000
+    }, {
+        id: '2.3_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'Sensors attacks',
+        value: 10000
+    }, {
+        id: '2.4_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'Vehicle to Vehicle (V2V) Network Attacks',
+        value: 10000
+    }, {
+        id: '2.5_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'Vehicle to Infrastructure (V2I) Network Attacks',
+        value: 10000
+    }, {
+        id: '2.6_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'OBD (On Board Debug) Port-based attack',
+        value: 10000
+    }, {
+        id: '2.7_risks-self-driving',
+        parent: '2.risks-self-driving',
+        name: 'USB/Bluetooth Attack',
+        value: 10000
+    },
+
+    //mitigation self driving cars
+
+    {
+        id: '2.1_mitigation-self-driving',
+        parent: '2.mitigations-self-driving',
+        name: 'OTA updates',
+        value: 10000
+    }, {
+        id: '2.2_mitigation-self-driving',
+        parent: '2.mitigations-self-driving',
+        name: 'Intrusion Detection and Prevention System (IDPS)',
+        value: 10000
+    }, {
+        id: '2.3_mitigation-self-driving',
+        parent: '2.mitigations-self-driving',
+        name: 'Detection and reaction system (VSOC)',
+        value: 10000
+    }, {
+        id: '2.2_mitigation-self-driving',
+        parent: '2.mitigations-self-driving',
+        name: 'AI/ML systems',
         value: 10000
     },
     // RESIDUAL RISKS
