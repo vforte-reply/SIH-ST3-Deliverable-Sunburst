@@ -143,6 +143,38 @@ var data = [
         name: 'Mitigations',
         value: 10000
     },
+
+    //edge computing risks
+
+    {
+        id: '2.1_risks-edge-computing',
+        parent: '2.risks-edge-computing',
+        name: 'DDoS Attack (Flooding Attacks, Zero-Day Attacks) ',
+        value: 10000
+    }, {
+        id: '2.2_risks-edge-computing',
+        parent: '2.risks-edge-computing',
+        name: 'Side Channel Attack (Communication Channel, Power Consuption, Smartphone Based)',
+        value: 10000
+    }, {
+        id: '2.3_risks-edge-computing',
+        parent: '2.risks-edge-computing',
+        name: 'Malware Injection Attacks (Server-Side Injection, Device-Side Injection)',
+        value: 10000
+    }, {
+        id: '2.4_risks-edge-computing',
+        parent: '2.risks-edge-computing',
+        name: 'Authentication and Authorization Attacks',
+        value: 10000
+    },
+    
+    //edge computing mitigation             
+    {
+        id: '2.5_risks-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: '-----',
+        value: 10000
+    }, 
     // TODO
     {
         id: '2.risks-AR',
@@ -326,6 +358,37 @@ var data = [
         name: 'Mitigations',
         value: 10000
     },
+    //Qauntum computing risks
+    {
+        id: '2.1_risks-quantum',
+        parent: '2.risks-quantum',
+        name: 'Asymmetric encryption breaking (Shor\'s Algorithm)',
+        value: 10000
+    }, {
+        id: '2.2_risks-quantum',
+        parent: '2.risks-quantum',
+        name: 'Symmetric encryption breaking (Grover’s algorithm)',
+        value: 10000
+    },
+    //quantum computing mitigation
+
+    {
+        id: '2.1_mitigation-quantum',
+        parent: '2.mitigations-quantum',
+        name: 'Quantum-safe Cryptography',
+        value: 10000
+    }, {
+        id: '2.2_mitigation-quantum',
+        parent: '2.mitigations-quantum',
+        name: 'Quantum Key Distribution',
+        value: 10000
+    }, {
+        id: '2.3_mitigation-quantum',
+        parent: '2.mitigations-quantum',
+        name: 'Quantum Random Generator',
+        value: 10000
+    },
+
     // Artificial Intelligence
     {
         id: '2.risks-ai',
