@@ -377,7 +377,7 @@ var data = [
         parent: '2.mitigations-quantum',
         name: 'Quantum-safe Cryptography',
         value: 10000
-    }, /*{
+    }, {
         id: '2.2_mitigation-quantum',
         parent: '2.mitigations-quantum',
         name: 'Quantum Key Distribution',
@@ -387,7 +387,7 @@ var data = [
         parent: '2.mitigations-quantum',
         name: 'Quantum Random Generator',
         value: 10000
-    },+/
+    },
 
     // Artificial Intelligence
     {
