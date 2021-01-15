@@ -108,12 +108,14 @@
                         console.log(event);
                         if ('altKey' in event && event.altKey) {
                             if ('point' in event && 'url' in event.point) {
-                                sessionStorage.setItem("point", JSON.stringify({
-                                    title: event.point.name,
-                                    description: event.point.description,
-                                    type: event.point.type,
-                                    links: event.point.links.map(label => data.find(x => x.id === label))
-                                }));
+                                if ('links' in event.point) {
+                                    sessionStorage.setItem("point", JSON.stringify({
+                                        title: event.point.name,
+                                        description: event.point.description,
+                                        type: event.point.type,
+                                        links: event.point.links.map(label => data.find(x => x.id === label))
+                                    }));
+                                }
 
                                 window.open(event.point.url, '_blank');
                             }
