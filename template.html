@@ -84,6 +84,7 @@
                     sessionStorage.setItem("point", JSON.stringify({
                         title: link.name,
                         description: link.description,
+                        type: link.type,
                         links: link.links.map(label => data.find(x => x.id === label))
                     }));
 
