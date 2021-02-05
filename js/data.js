@@ -43,13 +43,7 @@ var data = [
         url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
     },
     // Communication
-    {
-        id: '1.AR',
-        parent: '0.communication',
-        name: 'Augmented Reality',
-        value: 1000,
-        url: 'https://www.reply.com/it/content/augmented-reality'
-    }, {
+     {
         id: '1.chatbot',
         parent: '0.communication',
         name: 'Chat Bot',
@@ -65,9 +59,9 @@ var data = [
         value: 2000,
         url: 'https://www.reply.com/it/3d-printing'
     }, {
-        id: '1.VR',
+        id: '1.VR_AR',
         parent: '0.communication',
-        name: 'Virtual Reality',
+        name: 'Virtual Reality/Augmented Reality',
         value: 3000,
         url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
     },
@@ -264,18 +258,7 @@ var data = [
         name: '-----',
         value: 10000
     }, 
-    // TODO
-    {
-        id: '2.risks-AR',
-        parent: '1.AR',
-        name: 'Risks',
-        value: 10000
-    }, {
-        id: '2.mitigations-AR',
-        parent: '1.AR',
-        name: 'Mitigations',
-        value: 10000
-    },
+    
     // Chat Bot
     {
         id: '2.risks-chatbot',
@@ -411,18 +394,72 @@ var data = [
 
 
 
-    // TODO
+    // VR/AR
     {
-        id: '2.risks-VR',
-        parent: '1.VR',
+        id: '2.risks-VR_AR',
+        parent: '1.VR_AR',
         name: 'Risks',
         value: 10000
     }, {
-        id: '2.mitigations-VR',
-        parent: '1.VR',
+        id: '2.mitigations-VR_AR',
+        parent: '1.VR_AR',
         name: 'Mitigations',
         value: 10000
     },
+
+    //VR_AR risks
+
+    {
+        id: '2.1_risks-VR_AR',
+        parent: '2.risks-VR_AR',
+        name: 'Eye Tracking',
+        value: 10000
+    }, {
+        id: '2.2_risks-VR_AR',
+        parent: '2.risks-VR_AR',
+        name: 'Blackmailing / Sextorsion',
+        value: 10000
+    }, {
+        id: '2.3_risks-VR_AR',
+        parent: '2.risks-VR_AR',
+        name: 'Fake identities / Deepfakes',
+        value: 10000
+    }, {
+        id: '2.4_risks-VR_AR',
+        parent: '2.risks-VR_AR',
+        name: 'Unencrypted data usage',
+        value: 10000
+    },
+
+    {
+        id: '2.5_risks-VR_AR',
+        parent: '2.risks-VR_AR',
+        name: 'Mirai malware',
+        value: 10000
+    },
+
+    //mitigation VR_AR
+
+    {
+        id: '2.1_mitigation-VR_AR',
+        parent: '2.mitigations-VR_AR',
+        name: 'Usage of private mode',
+        value: 10000
+    }, {
+        id: '2.2_mitigation-VR_AR',
+        parent: '2.mitigations-VR_AR',
+        name: 'Identity management',
+        value: 10000
+    }, {
+        id: '2.3_mitigation-VR_AR',
+        parent: '2.mitigations-VR_AR',
+        name: 'Authentication systems',
+        value: 10000
+    }, 
+
+
+
+
     // TODO
     {
         id: '2.risks-big-data',
