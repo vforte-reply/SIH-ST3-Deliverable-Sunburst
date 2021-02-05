@@ -131,6 +131,95 @@ var data = [
         name: 'Mitigations',
         value: 10000
     },
+
+    //blockchain risks
+
+    {
+        id: '2.1_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'Endpoint vulnerabilities',
+        value: 10000
+    }, {
+        id: '2.2_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'Untested code',
+        value: 10000
+    }, {
+        id: '2.3_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'The on-ramp',
+        value: 10000
+    }, {
+        id: '2.4_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'Stolen keys',
+        value: 10000
+    },
+
+    {
+        id: '2.5_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: '51% attacks',
+        value: 10000
+    },
+
+    {
+        id: '2.6_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'Sybil attacks',
+        value: 10000
+    },
+
+    {
+        id: '2.7_risks-blockchain',
+        parent: '2.risks-blockchain',
+        name: 'Routing attacks',
+        value: 10000
+    },
+
+    //blockchain mitigation             
+    {
+        id: '2.1_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Identity and access management',
+        value: 10000
+    },
+
+    {
+        id: '2.2_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Key management',
+        value: 10000
+    },
+
+    {
+        id: '2.3_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Data privacy',
+        value: 10000
+    },
+
+    {
+        id: '2.4_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Secure communication',
+        value: 10000
+    },
+
+    {
+        id: '2.5_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Smart contract security',
+        value: 10000
+    },
+
+    {
+        id: '2.6_mitigation-blockchain',
+        parent: '2.mitigations-blockchain',
+        name: 'Transaction endorsement',
+        value: 10000
+    },
+
     // Edge Computing
     {
         id: '2.risks-edge-computing',
