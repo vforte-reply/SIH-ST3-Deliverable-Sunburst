@@ -323,18 +323,7 @@ var data = [
             '2.4_risks-edge-computing'
         ]
     },
-    // TODO
-    {
-        id: '2.risks-AR',
-        parent: '1.AR',
-        name: 'Risks',
-        value: 10000
-    }, {
-        id: '2.mitigations-AR',
-        parent: '1.AR',
-        name: 'Mitigations',
-        value: 10000
-    },
+  
     // Chat Bot
     {
         id: '2.risks-chatbot',
@@ -386,22 +375,22 @@ var data = [
 
     //mitigation chatbot            
     {
-        id: '2.5_risks-chatbot',
+        id: '2.1_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: '2FA with Biometric',
         value: 10000
     }, {
-        id: '2.6_risks-chatbot',
+        id: '2.2_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'Authentication Timeouts',
         value: 10000
     }, {
-        id: '2.7_risks-chatbot',
+        id: '2.3_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'Messages That Self-Destruct',
         value: 10000
     }, {
-        id: '2.1_mitigation-chatbot',
+        id: '2.4_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'End to end encryption',
         value: 10000
@@ -447,22 +436,22 @@ var data = [
     //mitigation 3D printing
 
     {
-        id: '2.5_risks-3d-printing',
+        id: '2.1_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure digital design and code',
         value: 10000
     }, {
-        id: '2.6_risks-3d-printing',
+        id: '2.2_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure acoustic measurements',
         value: 10000
     }, {
-        id: '2.7_risks-3d-printing',
+        id: '2.3_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Verify printer component tracking',
         value: 10000
     }, {
-        id: '2.1_mitigation-3d-printing',
+        id: '2.4_mitigation-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure deteclable nanorods',
         value: 10000
