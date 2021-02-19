@@ -170,7 +170,7 @@ var data = [
         name: 'Routing attacks',
         value: 10000
     },
-       
+
     //blockchain mitigation             
     {
         id: '2.1_mitigation-blockchain',
@@ -213,7 +213,7 @@ var data = [
         name: 'Transaction endorsement',
         value: 10000
     },
-    
+
     // Edge Computing
     {
         id: '2.risks-edge-computing',
@@ -228,37 +228,113 @@ var data = [
     },
 
     //edge computing risks
-
     {
         id: '2.1_risks-edge-computing',
         parent: '2.risks-edge-computing',
-        name: 'DDoS Attack (Flooding Attacks, Zero-Day Attacks) ',
-        value: 10000
+        name: 'DDoS Attack (Flooding Attacks, Zero-Day Attacks)',
+        value: 10000,
+        url: './template.html',
+        type: "risk",
+        description: "Questa è una descrizione del DDoS Attack",
+        links: [
+            '2.1_mitigation-edge-computing'
+        ]
     }, {
         id: '2.2_risks-edge-computing',
         parent: '2.risks-edge-computing',
         name: 'Side Channel Attack (Communication Channel, Power Consuption, Smartphone Based)',
-        value: 10000
+        value: 10000,
+        url: './template.html',
+        type: "risk",
+        description: "Questa è una descrizione di un Side Channel Attack",
+        links: [
+            '2.2_mitigation-edge-computing'
+        ]
     }, {
         id: '2.3_risks-edge-computing',
         parent: '2.risks-edge-computing',
         name: 'Malware Injection Attacks (Server-Side Injection, Device-Side Injection)',
-        value: 10000
+        value: 10000,
+        url: './template.html',
+        type: "risk",
+        description: "Questa è una descrizione di un Malware Injection Attack",
+        links: [
+            '2.3_mitigation-edge-computing'
+        ]
     }, {
         id: '2.4_risks-edge-computing',
         parent: '2.risks-edge-computing',
         name: 'Authentication and Authorization Attacks',
-        value: 10000
+        value: 10000,
+        url: './template.html',
+        type: "risk",
+        description: "Questa è una descrizione di un Authentication and Authorization Attack",
+        links: [
+            '2.4_mitigation-edge-computing'
+        ]
     },
-    
+
     //edge computing mitigation             
     {
-        id: '2.1_mitigations-edge-computing',
+        id: '2.1_mitigation-edge-computing',
         parent: '2.mitigations-edge-computing',
-        name: '-----',
+        name: 'Flooding detect-and-filter technique',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di mitigazione Flooding detect-and-filter",
+        links: [
+            '2.1_risks-edge-computing'
+        ]
+    },
+    {
+        id: '2.2_mitigation-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: 'Data perturbation and differential privacy',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di mitigazione Data perturbation and differential privacy",
+        links: [
+            '2.2_risks-edge-computing'
+        ]
+    },
+    {
+        id: '2.3_mitigation-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: 'Static analysis for malicious code detection and fine-grained access control',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di mitigazione Static analysis",
+        links: [
+            '2.3_risks-edge-computing'
+        ]
+    },
+    {
+        id: '2.4_mitigation-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: 'Addition of one more layer of authentication (e.g., two-factor authentication)',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di autenticazione a più fattori",
+        links: [
+            '2.4_risks-edge-computing'
+        ]
+    },
+    // TODO
+    {
+        id: '2.risks-AR',
+        parent: '1.AR',
+        name: 'Risks',
         value: 10000
-    }, 
-    
+    }, {
+        id: '2.mitigations-AR',
+        parent: '1.AR',
+        name: 'Mitigations',
+        value: 10000
+    },
     // Chat Bot
     {
         id: '2.risks-chatbot',
@@ -623,7 +699,7 @@ var data = [
         value: 10000,
         url: './template.html',
         type: "risk",
-        description: "Questa è una descrizione di RISK",
+        description: "Questa è una descrizione del rischio ...",
         links: [
             '3.2.ai-data-sanitization',
             '3.2.ai-anomaly-detection'
@@ -670,7 +746,7 @@ var data = [
         value: 10000,
         url: './template.html',
         type: "mitigation",
-        description: "Questa è una descrizione di MITIGATION",
+        description: "Questa è una descrizione della tecnica di mitigazione ...",
         links: [
             '3.1.ai-privacy-violation'
         ]
@@ -681,7 +757,7 @@ var data = [
         value: 10000,
         url: './template.html',
         type: "mitigation",
-        description: "Questa è una descrizione di MITIGATION",
+        description: "Questa è una descrizione della tecnica di mitigazione ...",
         links: [
             '3.1.ai-privacy-violation'
         ]
