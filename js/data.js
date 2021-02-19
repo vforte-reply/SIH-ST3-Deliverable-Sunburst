@@ -43,7 +43,7 @@ var data = [
         url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
     },
     // Communication
-     {
+    {
         id: '1.chatbot',
         parent: '0.communication',
         name: 'Chat Bot',
@@ -250,26 +250,45 @@ var data = [
         name: 'Authentication and Authorization Attacks',
         value: 10000
     },
-    
+
     //edge computing mitigation             
     {
         id: '2.5_risks-edge-computing',
         parent: '2.mitigations-edge-computing',
-        name: '-----',
-        value: 10000
-    }, 
-    // TODO
-    {
-        id: '2.risks-AR',
-        parent: '1.AR',
-        name: 'Risks',
-        value: 10000
-    }, {
-        id: '2.mitigations-AR',
-        parent: '1.AR',
-        name: 'Mitigations',
-        value: 10000
+        name: 'Data perturbation and differential privacy',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di mitigazione Data perturbation and differential privacy",
+        links: [
+            '2.2_risks-edge-computing'
+        ]
     },
+    {
+        id: '2.3_mitigation-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: 'Static analysis for malicious code detection and fine-grained access control',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di mitigazione Static analysis",
+        links: [
+            '2.3_risks-edge-computing'
+        ]
+    },
+    {
+        id: '2.4_mitigation-edge-computing',
+        parent: '2.mitigations-edge-computing',
+        name: 'Addition of one more layer of authentication (e.g., two-factor authentication)',
+        value: 10000,
+        url: './template.html',
+        type: "mitigation",
+        description: "Questa è una descrizione della tecnica di autenticazione a più fattori",
+        links: [
+            '2.4_risks-edge-computing'
+        ]
+    },
+
     // Chat Bot
     {
         id: '2.risks-chatbot',
@@ -321,22 +340,22 @@ var data = [
 
     //mitigation chatbot            
     {
-        id: '2.5_risks-chatbot',
+        id: '2.1_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: '2FA with Biometric',
         value: 10000
     }, {
-        id: '2.6_risks-chatbot',
+        id: '2.2_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'Authentication Timeouts',
         value: 10000
     }, {
-        id: '2.7_risks-chatbot',
+        id: '2.3_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'Messages That Self-Destruct',
         value: 10000
     }, {
-        id: '2.1_mitigation-chatbot',
+        id: '2.4_mitigation-chatbot',
         parent: '2.mitigations-chatbot',
         name: 'End to end encryption',
         value: 10000
@@ -382,22 +401,22 @@ var data = [
     //mitigation 3D printing
 
     {
-        id: '2.5_risks-3d-printing',
+        id: '2.1_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure digital design and code',
         value: 10000
     }, {
-        id: '2.6_risks-3d-printing',
+        id: '2.2_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure acoustic measurements',
         value: 10000
     }, {
-        id: '2.7_risks-3d-printing',
+        id: '2.3_mitigations-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Verify printer component tracking',
         value: 10000
     }, {
-        id: '2.1_mitigation-3d-printing',
+        id: '2.4_mitigation-3d-printing',
         parent: '2.mitigations-3d-printing',
         name: 'Secure deteclable nanorods',
         value: 10000
@@ -466,7 +485,7 @@ var data = [
         parent: '2.mitigations-VR_AR',
         name: 'Authentication systems',
         value: 10000
-    }, 
+    },
 
 
 
