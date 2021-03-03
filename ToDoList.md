@@ -6,3 +6,7 @@
 - [x] Evitare il drolldown se si fa click + shiftKey
 - [ ] Cambiare tooltip
 - [ ] Creare una pagina per ogni slice
+
+
+Primo deliverable:
+- [ ] Sistemare grafica, dimensioni, scritte verticali/orizzontali, sovrapposizioni scritte
