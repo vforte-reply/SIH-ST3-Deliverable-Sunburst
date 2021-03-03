@@ -16,4 +16,4 @@ Primo deliverable:
 
 Secondo deliverable:
 
--[ ] Aggiungere quarto cerchio con le mitigation sovrapposte ai corretti risk
+-[] Aggiungere quarto cerchio con le mitigation sovrapposte ai corretti risk
