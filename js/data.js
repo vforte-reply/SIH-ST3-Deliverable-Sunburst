@@ -78,15 +78,15 @@ var data = [
         name: 'Quantum Computing',
         value: 3000,
         url: 'https://www.reply.com/it/topics/quantum-computing/'
-    },
-    // Automated and connected systems
-    {
+    }, {
         id: '1.ai',
-        parent: '0.iot',
+        parent: '0.data',
         name: 'Artificial Intelligence',
         value: 1000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
-    }, {
+    },
+    // Automated and connected systems
+    {
         id: '1.rpa',
         parent: '0.iot',
         name: 'Robot Process Automation',
