@@ -65,6 +65,31 @@ var data = [
         value: 3000,
         url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
     },
+
+    {
+        id: '1.HMI',
+        parent: '0.communication',
+        name: 'HMI',
+        value: 3000,
+        url: ''
+    },
+
+    {
+        id: '1.IoT',
+        parent: '0.communication',
+        name: 'IoT',
+        value: 3000,
+        url: ''
+    },
+
+    {
+        id: '1.BUI',
+        parent: '0.communication',
+        name: 'Brain User Interface',
+        value: 3000,
+        url: ''
+    },
+
     // Data
     {
         id: '1.big-data',
@@ -78,10 +103,12 @@ var data = [
         name: 'Quantum Computing',
         value: 3000,
         url: 'https://www.reply.com/it/topics/quantum-computing/'
-    }, {
-        id: '1.ai',
+    }, 
+
+    {
+        id: '1.ml',
         parent: '0.data',
-        name: 'Artificial Intelligence',
+        name: 'Machine Learning',
         value: 1000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
     },
@@ -92,10 +119,35 @@ var data = [
         name: 'Robot Process Automation',
         value: 1000,
         url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
-    }, {
+    }, 
+    {
+        id: '1.ai',
+        parent: '0.iot',
+        name: 'Artificial Intelligence',
+        value: 1000,
+        url: 'https://www.reply.com/machine-learning-reply/it/'
+    },
+
+    {
+        id: '1.noCode',
+        parent: '0.iot',
+        name: 'NoCode',
+        value: 1000,
+        url: 'https://www.reply.com/machine-learning-reply/it/'
+    },
+    
+    {
         id: '1.self-driving',
         parent: '0.iot',
-        name: 'Self-driving Vehicles',
+        name: 'Self-driving Vehicles/Autonomous Things',
+        value: 3000,
+        url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
+    },
+
+    {
+        id: '1.hyperautomation',
+        parent: '0.iot',
+        name: 'Hyperautomation',
         value: 3000,
         url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
     },

@@ -24,6 +24,8 @@
             max-width: 500px;
         }
         
+        
+
         .highcharts-data-table caption {
             padding: 1em 0;
             font-size: 1.2em;
@@ -47,7 +49,7 @@
         }
         
         .highcharts-data-table tr:hover {
-            background: #f1f7ff;
+            background: #f1f7ff; 
         }
     </style>
 </head>
@@ -86,6 +88,8 @@
 
         // Splice in transparent for the center circle
         Highcharts.getOptions().colors.splice(0, 0, 'transparent');
+
+
 
         Highcharts.chart('container', {
 
@@ -130,7 +134,8 @@
                         operator: '>',
                         value: 16
                     },
-                    rotationMode: 'parallel'
+                    rotationMode: 'auto',
+                    
                 },
                 levels: [{
                     level: 1,
