@@ -18,7 +18,7 @@ var data = [
     }, {
         id: '0.iot',
         parent: '',
-        name: 'Automated and\n connected systems',
+        name: 'Automated and connected systems',
         color: '#58d68d'
     },
     // INNOVATIVE TECHNOLOGIES
@@ -134,7 +134,7 @@ var data = [
         id: '1.noCode',
         parent: '0.iot',
         name: 'NoCode',
-        value: 1000,
+        value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
     },
 
