@@ -18,7 +18,7 @@ var data = [
     }, {
         id: '0.iot',
         parent: '',
-        name: 'Automated and connected systems',
+        name: 'Automated and\n connected systems',
         color: '#58d68d'
     },
     // INNOVATIVE TECHNOLOGIES
@@ -61,8 +61,8 @@ var data = [
     }, {
         id: '1.VR_AR',
         parent: '0.communication',
-        name: 'Virtual Reality/Augmented Reality',
-        value: 3000,
+        name: 'VR/AR',
+        value: 2000,
         url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
     },
     // Data
@@ -70,19 +70,19 @@ var data = [
         id: '1.big-data',
         parent: '0.data',
         name: 'Big Data Analytics',
-        value: 1000,
+        value: 2000,
         url: 'https://www.reply.com/data-reply/it/'
     }, {
         id: '1.quantum',
         parent: '0.data',
         name: 'Quantum Computing',
-        value: 3000,
+        value: 2000,
         url: 'https://www.reply.com/it/topics/quantum-computing/'
     }, {
         id: '1.ai',
         parent: '0.data',
         name: 'Artificial Intelligence',
-        value: 1000,
+        value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
     },
     // Automated and connected systems
@@ -90,13 +90,13 @@ var data = [
         id: '1.rpa',
         parent: '0.iot',
         name: 'Robot Process Automation',
-        value: 1000,
+        value: 2000,
         url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
     }, {
         id: '1.self-driving',
         parent: '0.iot',
         name: 'Self-driving Vehicles',
-        value: 3000,
+        value: 2000,
         url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
     },
 

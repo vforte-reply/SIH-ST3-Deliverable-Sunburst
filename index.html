@@ -104,6 +104,7 @@
                 data: data,
                 allowDrillToNode: true,
                 cursor: 'pointer',
+                clip: true,
                 events: {
                     click: function(event) {
                         console.log(event);
@@ -130,7 +131,9 @@
                         operator: '>',
                         value: 16
                     },
-                    rotationMode: 'parallel'
+                    // Available rotationMode options: auto, circular, parallel and perpendicular
+                    // Ref: https://api.highcharts.com/highcharts/series.sunburst.dataLabels.rotationMode
+                    rotationMode: 'perpendicular'
                 },
                 levels: [{
                     level: 1,
@@ -141,7 +144,8 @@
                             property: 'outerArcLength',
                             operator: '>',
                             value: 64
-                        }
+                        },
+                        rotationMode: 'parallel'
                     }
                 }, {
                     level: 2,
