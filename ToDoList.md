@@ -8,7 +8,11 @@
 - [ ] Creare una pagina per ogni slice
 
 Refactoring:
-- [ ] Sistemare grafica, dimensioni, scritte verticali/orizzontali, sovrapposizioni scritte
+- [ ] Sistemare colori
+- [x] Aumentare la dimensione del font
+- [x] Correggere orientamento delle etichette
+- [x] Eliminare sovrapposizioni
+- [x] Rendere visibili tutte le etichette
 
 Primo deliverable:
 - [ ] Visualizzare solo i primi tre cerchi

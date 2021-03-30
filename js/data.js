@@ -18,7 +18,7 @@ var data = [
     }, {
         id: '0.iot',
         parent: '',
-        name: 'Automated and connected systems',
+        name: 'Automated and <br/><b>Connected </b><br/><b>Systems</b>',
         color: '#58d68d'
     },
     // INNOVATIVE TECHNOLOGIES
@@ -78,7 +78,7 @@ var data = [
         id: '1.HMI',
         parent: '0.communication',
         name: 'HMI',
-        value: 3000,
+        value: 2000,
         url: ''
     },
 
@@ -86,7 +86,7 @@ var data = [
         id: '1.BUI',
         parent: '0.communication',
         name: 'Brain User Interface',
-        value: 3000,
+        value: 2000,
         url: ''
     },
 
@@ -141,7 +141,7 @@ var data = [
     {
         id: '1.self-driving',
         parent: '0.iot',
-        name: 'Self-driving Vehicles/Autonomous Things',
+        name: 'Self-driving Vehicles <br/><b>Autonomous Things</b>',
         value: 2000,
         url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
     },
