@@ -19,6 +19,7 @@ var data = [
         id: '0.iot',
         parent: '',
         name: 'Automated and <br/><b>Connected </b><br/><b>Systems</b>',
+        // name: 'Automated and Connected Systems',
         color: '#58d68d'
     },
     // INNOVATIVE TECHNOLOGIES
@@ -125,7 +126,7 @@ var data = [
     {
         id: '1.rpa',
         parent: '0.iot',
-        name: 'Robot Process Automation',
+        name: 'RPA',
         value: 2000,
         url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
     },
