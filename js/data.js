@@ -24,25 +24,6 @@ var data = [
     },
     // INNOVATIVE TECHNOLOGIES
     // Infrastructure
-    {
-        id: '1.5G',
-        parent: '0.infrastructure',
-        name: '5G',
-        value: 2000,
-        url: 'https://www.reply.com/it/industries/telco-and-media/5g-mastering-the-magic-triangle'
-    }, {
-        id: '1.blockchain',
-        parent: '0.infrastructure',
-        name: 'Blockchain',
-        value: 2000,
-        url: 'https://www.reply.com/it/blockchain'
-    }, {
-        id: '1.edge-computing',
-        parent: '0.infrastructure',
-        name: 'Edge Computing',
-        value: 2000,
-        url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
-    },
 
     {
         id: '1.IoT',
@@ -51,7 +32,38 @@ var data = [
         value: 2000,
         url: ''
     },
+    {
+        id: '1.edge-computing',
+        parent: '0.infrastructure',
+        name: 'Edge Computing',
+        value: 2000,
+        url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
+    },
+    {
+        id: '1.5G',
+        parent: '0.infrastructure',
+        name: '5G',
+        value: 2000,
+        url: 'https://www.reply.com/it/industries/telco-and-media/5g-mastering-the-magic-triangle'
+    },
+    {
+        id: '1.blockchain',
+        parent: '0.infrastructure',
+        name: 'Blockchain',
+        value: 2000,
+        url: 'https://www.reply.com/it/blockchain'
+    },
+
     // Communication
+
+    {
+        id: '1.3d-printing',
+        parent: '0.communication',
+        name: '3D Printing',
+        value: 2000,
+        url: 'https://www.reply.com/it/3d-printing'
+    },
+
     {
         id: '1.chatbot',
         parent: '0.communication',
@@ -60,27 +72,20 @@ var data = [
         url: 'https://www.reply.com/it/topics/crm/chatbot-un-nuovo-canale-di-comunicazione-verso-il-cliente'
     },
 
-    //3D printing
     {
-        id: '1.3d-printing',
+        id: '1.HMI',
         parent: '0.communication',
-        name: '3D Printing',
+        name: 'Innovative HMI',
         value: 2000,
-        url: 'https://www.reply.com/it/3d-printing'
-    }, {
+        url: ''
+    },
+
+    {
         id: '1.VR_AR',
         parent: '0.communication',
         name: 'VR/AR',
         value: 2000,
         url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
-    },
-
-    {
-        id: '1.HMI',
-        parent: '0.communication',
-        name: 'HMI',
-        value: 2000,
-        url: ''
     },
 
     {
@@ -98,12 +103,6 @@ var data = [
         name: 'Big Data Analytics',
         value: 2000,
         url: 'https://www.reply.com/data-reply/it/'
-    }, {
-        id: '1.quantum',
-        parent: '0.data',
-        name: 'Quantum Computing',
-        value: 2000,
-        url: 'https://www.reply.com/it/topics/quantum-computing/'
     },
 
     {
@@ -122,7 +121,24 @@ var data = [
         value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
     },
+
+    {
+        id: '1.quantum',
+        parent: '0.data',
+        name: 'Quantum Computing',
+        value: 2000,
+        url: 'https://www.reply.com/it/topics/quantum-computing/'
+    },
     // Automated and connected systems
+
+    {
+        id: '1.noCode',
+        parent: '0.iot',
+        name: 'NoCode',
+        value: 2000,
+        url: 'https://www.reply.com/machine-learning-reply/it/'
+    },
+
     {
         id: '1.rpa',
         parent: '0.iot',
@@ -131,12 +147,12 @@ var data = [
         url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
     },
 
+
     {
-        id: '1.noCode',
+        id: '1.hyperautomation',
         parent: '0.iot',
-        name: 'NoCode',
+        name: 'Hyperautomation',
         value: 2000,
-        url: 'https://www.reply.com/machine-learning-reply/it/'
     },
 
     {
@@ -148,10 +164,10 @@ var data = [
     },
 
     {
-        id: '1.hyperautomation',
+        id: '1.smart-aircraft',
         parent: '0.iot',
-        name: 'Hyperautomation',
-        value: 2000,
+        name: 'Smart Aircraft',
+        value: 2000
     },
 
     // DETAILS
