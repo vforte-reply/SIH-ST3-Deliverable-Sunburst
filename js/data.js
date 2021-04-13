@@ -24,41 +24,77 @@ var data = [
     },
     // INNOVATIVE TECHNOLOGIES
     // Infrastructure
-
+    {
+        id: 'T1_INFR',
+        parent: '0.infrastructure',
+        name: 'T1',
+        value: 2000,
+        url: ''
+    },
+    {
+        id: 'T2_INFR',
+        parent: '0.infrastructure',
+        name: 'T2',
+        value: 2000,
+        url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
+    },
+    
     {
         id: '1.IoT',
-        parent: '0.infrastructure',
+        parent: 'T1_INFR',
         name: 'IoT',
         value: 2000,
         url: ''
     },
     {
         id: '1.edge-computing',
-        parent: '0.infrastructure',
+        parent: 'T2_INFR',
         name: 'Edge Computing',
         value: 2000,
         url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
     },
     {
         id: '1.5G',
-        parent: '0.infrastructure',
+        parent: 'T2_INFR',
         name: '5G',
         value: 2000,
         url: 'https://www.reply.com/it/industries/telco-and-media/5g-mastering-the-magic-triangle'
     },
     {
         id: '1.blockchain',
-        parent: '0.infrastructure',
+        parent: 'T2_INFR',
         name: 'Blockchain',
         value: 2000,
         url: 'https://www.reply.com/it/blockchain'
     },
 
     // Communication
+    {
+        id: 'T1_COMM',
+        parent: '0.communication',
+        name: 'T1',
+        value: 2000,
+        //url: 'https://www.reply.com/it/3d-printing'
+    },
 
     {
-        id: '1.3d-printing',
+        id: 'T2_COMM',
         parent: '0.communication',
+        name: 'T2',
+        value: 2000,
+        //url: 'https://www.reply.com/it/topics/crm/chatbot-un-nuovo-canale-di-comunicazione-verso-il-cliente'
+    },
+
+    {
+        id: 'T3_COMM',
+        parent: '0.communication',
+        name: 'T3',
+        value: 2000,
+        url: ''
+    },
+    {
+        id: '1.3d-printing',
+        parent: 'T2_COMM',
         name: '3D Printing',
         value: 2000,
         url: 'https://www.reply.com/it/3d-printing'
@@ -66,7 +102,7 @@ var data = [
 
     {
         id: '1.chatbot',
-        parent: '0.communication',
+        parent: 'T2_COMM',
         name: 'Chat Bot',
         value: 2000,
         url: 'https://www.reply.com/it/topics/crm/chatbot-un-nuovo-canale-di-comunicazione-verso-il-cliente'
@@ -74,7 +110,7 @@ var data = [
 
     {
         id: '1.HMI',
-        parent: '0.communication',
+        parent: 'T1_COMM',
         name: 'Innovative HMI',
         value: 2000,
         url: ''
@@ -82,7 +118,7 @@ var data = [
 
     {
         id: '1.VR_AR',
-        parent: '0.communication',
+        parent: 'T3_COMM',
         name: 'VR/AR',
         value: 2000,
         url: 'https://www.reply.com/it/centro-realta-virtuale-e-aumentata'
@@ -90,16 +126,44 @@ var data = [
 
     {
         id: '1.BUI',
-        parent: '0.communication',
+        parent: 'T3_COMM',
         name: 'Brain User Interface',
         value: 2000,
         url: ''
     },
 
     // Data
+
+    {
+        id: 'T1_Data',
+        parent: '0.data',
+        name: 'T1',
+        value: 2000,
+        url: 'https://www.reply.com/data-reply/it/'
+    },
+/*
+    {
+        id: 'T2_Data',
+        parent: '0.data',
+        name: 'T2',
+        value: 2000,
+        url: 'https://www.reply.com/machine-learning-reply/it/'
+    },*/
+
+
+    {
+        id: 'T3_Data',
+        parent: '0.data',
+        name: 'T3',
+        value: 2000,
+        url: 'https://www.reply.com/machine-learning-reply/it/'
+    },
+
+
+
     {
         id: '1.big-data',
-        parent: '0.data',
+        parent: 'T1_Data',
         name: 'Big Data Analytics',
         value: 2000,
         url: 'https://www.reply.com/data-reply/it/'
@@ -107,7 +171,7 @@ var data = [
 
     {
         id: '1.ml',
-        parent: '0.data',
+        parent: 'T1_Data',
         name: 'Machine Learning',
         value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
@@ -116,7 +180,7 @@ var data = [
 
     {
         id: '1.ai',
-        parent: '0.data',
+        parent: 'T1_Data',
         name: 'Artificial Intelligence',
         value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
@@ -124,16 +188,38 @@ var data = [
 
     {
         id: '1.quantum',
-        parent: '0.data',
+        parent: 'T3_Data',
         name: 'Quantum Computing',
         value: 2000,
         url: 'https://www.reply.com/it/topics/quantum-computing/'
     },
     // Automated and connected systems
+    {
+        id: 'T1_Automated',
+        parent: '0.iot',
+        name: 'T1',
+        value: 2000,
+        //url: 'https://www.reply.com/machine-learning-reply/it/'
+    },
 
     {
-        id: '1.noCode',
+        id: 'T2_Automated',
         parent: '0.iot',
+        name: 'T2',
+        value: 2000,
+        //url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
+    },
+
+
+    {
+        id: 'T3_Automated',
+        parent: '0.iot',
+        name: 'T3',
+        value: 2000,
+    },
+    {
+        id: '1.noCode',
+        parent: 'T1_Automated',
         name: 'NoCode',
         value: 2000,
         url: 'https://www.reply.com/machine-learning-reply/it/'
@@ -141,7 +227,7 @@ var data = [
 
     {
         id: '1.rpa',
-        parent: '0.iot',
+        parent: 'T1_Automated',
         name: 'RPA',
         value: 2000,
         url: 'https://www.reply.com/it/topics/big-data-and-analytics/rpa-launch-your-digital-transformation'
@@ -150,14 +236,14 @@ var data = [
 
     {
         id: '1.hyperautomation',
-        parent: '0.iot',
+        parent: 'T2_Automated',
         name: 'Hyperautomation',
         value: 2000,
     },
 
     {
         id: '1.self-driving',
-        parent: '0.iot',
+        parent: 'T2_Automated',
         name: 'Self-driving Vehicles <br/><b>Autonomous Things</b>',
         value: 2000,
         url: 'https://www.reply.com/en/newsroom/news/the-autonomous-things-trend-research-study-shows-the-evolution-from-automation-to-autonomous-things'
@@ -165,7 +251,7 @@ var data = [
 
     {
         id: '1.smart-aircraft',
-        parent: '0.iot',
+        parent: 'T3_Automated',
         name: 'Smart Aircraft',
         value: 2000
     },
