@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Secure Innovation Hub - Stream #3 - Deliverable</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style type="text/css">
         .highcharts-figure,
         .highcharts-data-table table {
@@ -91,11 +93,22 @@
 
 
         Highcharts.chart('container', {
-
             chart: {
                 height: '100%'
             },
-
+            events: {
+                load: function() {
+                    console.log('LOAD1...');
+                    // let data = this.series[0].data;
+                    // data.forEach(point => {
+                    //     if (point.value > 100) {
+                    //         point.update({
+                    //             borderColor: '#cc0000'
+                    //         })
+                    //     }
+                    // })
+                }
+            },
             title: {
                 text: 'Technological Trends'
             },
@@ -125,6 +138,17 @@
                                 window.open(event.point.url, '_blank');
                             }
                         }
+                    },
+                    load: function() {
+                        console.log('LOAD2...');
+                        // let data = this.series[0].data;
+                        // data.forEach(point => {
+                        //     if (point.value > 100) {
+                        //         point.update({
+                        //             borderColor: '#cc0000'
+                        //         })
+                        //     }
+                        // })
                     }
                 },
                 dataLabels: {
@@ -132,7 +156,7 @@
                     filter: {
                         property: 'innerArcLength',
                         operator: '>',
-                        value: 16
+                        value: 16,
                     },
                     // Available rotationMode options: auto, circular, parallel and perpendicular
                     // Ref: https://api.highcharts.com/highcharts/series.sunburst.dataLabels.rotationMode
@@ -179,6 +203,9 @@
                 pointFormat: '<b>{point.name}</b>'
             }
         });
+
+        // Remove Credits
+        $('.highcharts-credits').remove();
     </script>
 </body>
 
