@@ -258,43 +258,72 @@ var data = [
 
     // DETAILS
     // 5G
-    /* {
-         id: '2.risks-5G',
+     {
+         id: '2.1.risks-5G',
          parent: '1.5G',
-         name: 'Risks',
+         name: 'Network slice inteference',
          value: 10000
-     }, {
-         id: '2.mitigations-5G',
-         parent: '1.5G',
-         name: 'Mitigations',
-         value: 10000
-     },*/
+     },
+     
+     {
+        id: '2.1.mit-5G',
+        parent: '2.1.risks-5G',
+        name: 'Ensuring strict access controls',
+        value: 10000
+    },
 
+     
+     {
+        id: '2.2.risks-5G',
+        parent: '1.5G',
+        name: 'Single Supplier dependency',
+        value: 10000
+    },
 
-    // {
-    //     id: '2.1-risks-5G',
-    //     parent: '1.5G',
-    //     name: 'Misconfiguration of networks',
-    //     value: 10000
-    // }, {
-    //     id: '2.2-risks-5G',
-    //     parent: '1.5G',
-    //     name: 'Lack of access controls',
-    //     value: 10000
-    // },
-    // {
-    //     id: '2.3-risks-5G',
-    //     parent: '1.5G',
-    //     name: 'Low product quality',
-    //     value: 10000
-    // },
+    {
+        id: '2.2.mit-5G',
+        parent: '2.2.risks-5G',
+        name: 'Diversification of suppliers',
+        value: 10000
+    },
 
-    // {
-    //     id: '2.4-risks-5G',
-    //     parent: '1.5G',
-    //     name: 'interference through 5G supply chain',
-    //     value: 10000
-    // },
+    {
+        id: '2.3.risks-5G',
+        parent: '1.5G',
+        name: 'Interdependecies of critical system',
+        value: 10000
+    },
+
+    {
+        id: '2.3.mit-5G',
+        parent: '2.3.risks-5G',
+        name: 'Reinforcing software integrity, update and patch management',
+        value: 10000
+    },
+
+    {
+        id: '2.4.risks-5G',
+        parent: '1.5G',
+        name: 'Exploitation of IoT/end-user devices',
+        value: 10000
+    },
+
+    {
+        id: '2.4.mit-5G',
+        parent: '2.4.risks-5G',
+        name: 'Security by design',
+        value: 10000
+    },
+
+    {
+        id: '2.5.mit-5G',
+        parent: '2.4.risks-5G',
+        name: 'Security by design',
+        value: 10000
+    },
+
+    
+     
 
     // Blockchain
     /* {
