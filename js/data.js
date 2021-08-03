@@ -38,7 +38,7 @@ var data = [
         value: 2000,
         url: 'https://www.reply.com/cluster-reply/it/content/edge-computing-con-azure'
     },
-    
+
     {
         id: '1.IoT',
         parent: 'T1_INFR',
@@ -141,14 +141,14 @@ var data = [
         value: 2000,
         url: 'https://www.reply.com/data-reply/it/'
     },
-/*
-    {
-        id: 'T2_Data',
-        parent: '0.data',
-        name: 'T2',
-        value: 2000,
-        url: 'https://www.reply.com/machine-learning-reply/it/'
-    },*/
+    /*
+        {
+            id: 'T2_Data',
+            parent: '0.data',
+            name: 'T2',
+            value: 2000,
+            url: 'https://www.reply.com/machine-learning-reply/it/'
+        },*/
 
 
     {
@@ -258,22 +258,22 @@ var data = [
 
     // DETAILS
     // 5G
-     {
-         id: '2.1.risks-5G',
-         parent: '1.5G',
-         name: 'Network slice inteference',
-         value: 10000
-     },
-     
-     {
+    {
+        id: '2.1.risks-5G',
+        parent: '1.5G',
+        name: 'Network slice inteference',
+        value: 10000
+    },
+
+    {
         id: '2.1.mit-5G',
         parent: '2.1.risks-5G',
         name: 'Ensuring strict access controls',
         value: 10000
     },
 
-     
-     {
+
+    {
         id: '2.2.risks-5G',
         parent: '1.5G',
         name: 'Single Supplier dependency',
@@ -322,8 +322,8 @@ var data = [
         value: 10000
     },
 
-    
-     
+
+
 
     // Blockchain
     /* {
