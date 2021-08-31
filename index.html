@@ -84,8 +84,38 @@
             // If a drill id is returned, noDrill is not set to true and altKey is not true, add click event and cursor.
             if (Highcharts.isString(drillId) && (!point.noDrill) && (!event.altKey)) {
                 point.setState(''); // Remove hover
+
+                // Show only three level at a time
+                let clickedLevel = event.point.node.level;
+                for (let i of series.userOptions.levels) {
+                    if (i.level >= clickedLevel - 1 && i.level <= clickedLevel + 2 - (event.point.node.sliced === false && event.point.node.parent !== "")) {
+                        switch (i.level) {
+                            case 1:
+                                i.levelSize = {
+                                    value: 4
+                                }
+                                break;
+                            case 2:
+                                i.levelSize = {
+                                    value: 1
+                                }
+                                break;
+
+                            default:
+                                i.levelSize = {
+                                    value: 5
+                                }
+                                break;
+                        }
+                    } else {
+                        i.levelSize = {
+                            value: 0
+                        }
+                    }
+                }
                 series.drillToNode(drillId);
             }
+
         }
 
         Highcharts.chart('container', {
@@ -106,7 +136,7 @@
                 clip: true,
                 events: {
                     click: function(event) {
-                        console.log(event);
+                        // console.log(event);
                         if ('altKey' in event && event.altKey) {
                             if ('point' in event && 'url' in event.point) {
                                 if ('links' in event.point) {
@@ -133,63 +163,6 @@
                     // Available rotationMode options: auto, circular, parallel and perpendicular
                     // Ref: https://api.highcharts.com/highcharts/series.sunburst.dataLabels.rotationMode
                     rotationMode: 'perpendicular'
-                },
-                point: {
-                    events: {
-                        click(e) {
-                            // let clickedLevel = this.node.level;
-
-                            let series = this.series,
-                                clickedLevel = this.node.level,
-                                currentOptions = series.userOptions.levels;
-
-                            // for (let i of currentOptions) {
-                            //     if (clickedLevel !== 0 /*or 1 */ && clickedLevel !== currentOptions.length) {
-                            //         if (i.level === clickedLevel || i.level === clickedLevel + 2 || i.level === clickedLevel - 2) {
-                            //             i.levelSize = {
-                            //                 value: 1
-                            //             }
-                            //         } else {
-                            //             i.levelSize = {
-                            //                 value: 0
-                            //             }
-                            //         }
-                            //     }
-                            // }
-
-                            for (let i of series.userOptions.levels) {
-                                if (i.level >= clickedLevel - 1 && i.level <= clickedLevel + 2) {
-                                    switch (i.level) {
-                                        case 1:
-                                            i.levelSize = {
-                                                value: 4
-                                            }
-                                            break;
-                                        case 2:
-                                            i.levelSize = {
-                                                value: 1
-                                            }
-                                            break;
-
-                                        default:
-                                            i.levelSize = {
-                                                value: 5
-                                            }
-                                            break;
-                                    }
-                                } else {
-                                    i.levelSize = {
-                                        value: 0
-                                    }
-                                }
-                            }
-
-                            // this.series = series;
-
-                            // this.series.update(ser, true);
-                            this.series.render();
-                        }
-                    }
                 },
                 levels: [{
                     level: 1,
